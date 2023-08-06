@@ -111,7 +111,7 @@ export const dataListModule = [
   {
     id: 1,
     url: "/html-dasar",
-    videoUrl: "https://www.youtube.com/watch?v=NBZ9Ro6UKV8",
+    videoUrl: "https://www.youtube.com/embed/NBZ9Ro6UKV8",
     title: "Module 1: Pengantar Pemrograman Web Dasar",
     description: "Website di era sekarang sudah menjadi kebutuhan utama yang tidak bisa diabaikan. Seluruh sektor bisnis atau edukasi dapat memanfaatkan website sebagai alat untuk promosi, tukar informasi, dan lainnya. Berdasarkan data dari World Wide Web Technology Surveys, dari seluruh website yang aktif, 88.2% menggunakan HTML dan 95.6% menggunakan CSS. Kelas ini membahas tuntas mengenai HTML dan CSS sebagai fondasi dalam pembuatan website.Web merupakan platform yang dapat diakses melalui banyak macam perangkat. Hal ini menjadi keuntungan jika Anda mengembangkan aplikasi berbasis web.Pengembangan web tidak membutuhkan komputer/laptop yang memiliki spesifikasi tinggi sehingga bukan menjadi hambatan utama bagi Anda yang tidak memiliki perangkat yang mumpuni. Website adalah platform yang dijangkau oleh banyak Search Engine seperti Google Search sehingga sangat cocok sebagai media promosi bisnis atau konten. Mengembangkan website termasuk pengembangan yang mudah di-maintenance dan mudah untuk dipublikasi.",
     audioUrl: "https://example.com/audio1.mp3",
@@ -119,7 +119,7 @@ export const dataListModule = [
   {
     id: 2,
     url: "/css-dasar",
-    videoUrl: "https://www.youtube.com/watch?v=CleFk3BZB3g",
+    videoUrl: "https://www.youtube.com/embed/CleFk3BZB3g",
     title: "Module 2: Pengenalan Dasar CSS",
     description: "Setelah belajar HTML, bahasa berikutnya yang harus kita pelajari agar menjadi web developer adalah CSS. Pemahaman tentang CSS sangat penting, jika kamu ingin fokus pada front-end web development. Kalau back-end, yaa sekedar tahu aja sudah cukup. Tugas front-end developer biasanya akan membuat halaman web berdasarkan desain dari desainer.",
     audioUrl: "https://example.com/audio2.mp3",
@@ -127,7 +127,7 @@ export const dataListModule = [
   {
     id: 3,
     url: "/javascript-dasar",
-    videoUrl: "https://www.youtube.com/watch?v=RUTV_5m4VeI",
+    videoUrl: "https://www.youtube.com/embed/RUTV_5m4VeI",
     title: "Module 3: Dasar Pemrograman dengan Javascript",
     description: "JavaScript adalah bahasa pemrograman yang digunakan untuk pengembangan website agar lebih dinamis. Ibarat kata, JavaScript memberikan “kehidupan” dalam website sehingga terciptanya interaksi antara pengunjung dengan situs tersebut. Website dinamis yang dimaksud berarti konten di dalamnya dapat bergerak atau mengubah apapun yang tampak di layar tanpa harus dimuat ulang secara manual. Misalnya seperti konten gambar animasi, maps, slideshow, polling, dan sebagainya. Elemen-elemen tersebut tentunya membuat website menjadi lebih menarik, sehingga pengunjung jadi betah mengeksplorasi isi di dalamnya. Awalnya, JavaScript hanya bekerja pada sisi client/frontend saja. Dengan begitu, proses pengolahan kode-kodenya hanya berjalan di sisi browser. Namun, seiring perkembangannya, JavaScript juga bisa digunakan di sisi server. Tentunya dengan bantuan berbagai framework seperti Node.js, dan React.js.",
     audioUrl: "https://example.com/audio1.mp3",
@@ -135,7 +135,7 @@ export const dataListModule = [
   {
     id: 4,
     url: "/bootstrap-framework",
-    videoUrl: "https://www.youtube.com/watch?v=aIDQSwr4ysY",
+    videoUrl: "https://www.youtube.com/embed/aIDQSwr4ysY",
     title: "Module 4: BOOTSTRAP",
     description: "Tujuan dan fungsi Bootstrap adalah untuk membuat website responsive dan mobile-first. Jadi, semua elemen antarmuka website dipastikan bisa bekerja secara optimal di semua ukuran layar, baik desktop maupun perangkat seluler. Bootstrap tersedia dalam dua varian: versi yang sudah dikompilasi dan didasarkan pada source code (kode sumber). Developer yang sudah berpengalaman biasanya memilih penggunaan Bootstrap dengan source code, karena lebih bebas menyesuaikan gaya dengan proyek yang dikerjakan. Contohnya, versi “kode sumber” Bootstrap memungkinkan Anda mengakses port Sass. Jadi, framework ini akan membuat stylesheet khusus yang mengimpor Bootstrap sehingga Anda bisa memodifikasi dan menambahkan fungsinya sesuai kebutuhan. Anda juga bisa menginstal Bootstrap dengan package manager, yaitu tool yang mengelola dan memperbarui framework, library, dan aset. Beberapa package manager yang paling populer adalah npm, Composer, dan Bower. Npm mengelola dependensi sisi server, sementara Composer fokus pada front-end. Apabila menangani proyek berbasis PHP, Anda bisa mencoba menggunakan Bower. Karena popularitasnya ini, Bootstrap memiliki banyak komunitas. Para developer dan desainer web bisa menjelajahi komunitas ini untuk saling berbagi pengetahuan dan membahas versi terbaru patch Bootstrap.",
     audioUrl: "https://example.com/audio1.mp3",

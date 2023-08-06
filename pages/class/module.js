@@ -5,12 +5,17 @@ import Link from "next/link";
 const Options = (props) => {
   return (
     <div className="min-w-full bg-white p-3 rounded-md shadow-lg hover:bg-gray-200 hover:cursor-pointer border-1 border-gray-200 mb-2">
-      <Link
-        href={props.url}
-        className="text-slate-800 font-medium whitespace-normal w-full"
-      >
+      <Link href={props.url} className="text-slate-800 font-medium whitespace-normal w-full">
         {props.label}
       </Link>
+      <div className="aspect-w-16 aspect-h-9">
+        <iframe
+          className="w-full h-full"
+          src={props.videoUrl}
+          frameBorder="0"
+          allowFullScreen
+        ></iframe>
+      </div>
     </div>
   );
 };
