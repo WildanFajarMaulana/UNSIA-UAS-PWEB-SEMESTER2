@@ -130,6 +130,7 @@ const Quiz = () => {
                     data.id === indexSoal && "border border-[#4ADE80]"
                   }`}
                   onClick={() => handleChangeSoal(data.id)}
+                  key={data.id}
                 >
                   {data.id}
                 </div>
