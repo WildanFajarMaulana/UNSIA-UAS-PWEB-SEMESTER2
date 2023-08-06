@@ -16,7 +16,7 @@ const Layout = ({ children }) => {
       <Navbar />
       <Header title={capitalizedSegment} subtitle={`Sub ${capitalizedSegment}`} />
       <div className="min-h-screen py-[60px] px-[120px]">
-        <div className="container mx-auto grid grid-cols-12 gap-8">
+        <div className="container mx-auto">
           {children}
         </div>
       </div>

@@ -85,23 +85,25 @@ const Class = () => {
 
   return (
     <>
-      <div className="col-span-9">
-        <div className="text-xl text-slate-800 mb-12 font-bold">
-          Daftar Modul
+      <div className="grid grid-cols-12 gap-8">
+        <div className="col-span-9">
+          <div className="text-xl text-slate-800 mb-12 font-bold">
+            Daftar Modul
+          </div>
+          {module &&
+            module.map((item, index) => (
+              <Options key={index} label={item.judul} url={item.url} />
+            ))}
         </div>
-        {module &&
-          module.map((item, index) => (
-            <Options key={index} label={item.judul} url={item.url} />
-          ))}
-      </div>
-      <div className="col-span-3">
-        <div className="text-xl text-slate-800 mb-12 font-bold">
-          Daftar quiz
+        <div className="col-span-3">
+          <div className="text-xl text-slate-800 mb-12 font-bold">
+            Daftar quiz
+          </div>
+          {listQuiz &&
+            listQuiz.map((item, index) => (
+              <Options key={index} label={item.judul} url={item.url} />
+            ))}
         </div>
-        {listQuiz &&
-          listQuiz.map((item, index) => (
-            <Options key={index} label={item.judul} url={item.url} />
-          ))}
       </div>
     </>
   );
