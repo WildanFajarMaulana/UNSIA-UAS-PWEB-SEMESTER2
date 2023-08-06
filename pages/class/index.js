@@ -1,4 +1,5 @@
 import React from "react";
+import { dataListModule } from "../utils/data";
 
 const Options = (props) => {
   return (
@@ -14,70 +15,7 @@ const Options = (props) => {
 };
 
 const Class = () => {
-  const module = [
-    {
-      judul: "HTML Dasar",
-      url: "/html-dasar",
-    },
-    {
-      judul: "CSS Dasar",
-      url: "/css-dasar",
-    },
-    {
-      judul: "JavaScript Dasar",
-      url: "/javascript-dasar",
-    },
-    {
-      judul: "Bootstrap Framework",
-      url: "/bootstrap-framework",
-    },
-    {
-      judul: "Node.js dan NPM",
-      url: "/nodejs-npm",
-    },
-    {
-      judul: "React.js",
-      url: "/reactjs",
-    },
-    {
-      judul: "Vue.js",
-      url: "/vuejs",
-    },
-    {
-      judul: "Express.js",
-      url: "/expressjs",
-    },
-    {
-      judul: "MongoDB",
-      url: "/mongodb",
-    },
-    {
-      judul: "RESTful API",
-      url: "/restful-api",
-    },
-    {
-      judul: "Authentication",
-      url: "/authentication",
-    },
-    {
-      judul: "Webpack dan Babel",
-      url: "/webpack-babel",
-    },
-    {
-      judul: "TypeScript",
-      url: "/typescript",
-    },
-    {
-      judul: "Testing dan Debugging",
-      url: "/testing-debugging",
-    },
-    {
-      judul: "Deployment ke Heroku",
-      url: "/deployment-heroku",
-    },
-  ];
-
-  const listQuiz = module.map((item) => ({
+  const listQuiz = dataListModule.map((item) => ({
     judul: `Quiz ${item.judul}`,
     url: `/quiz-${item.url.replace("/", "")}`,
     jumlah: Math.floor(Math.random() * 10) + 1,
@@ -90,8 +28,8 @@ const Class = () => {
           <div className="text-xl text-slate-800 mb-12 font-bold">
             Daftar Modul
           </div>
-          {module &&
-            module.map((item, index) => (
+          {dataListModule &&
+            dataListModule.map((item, index) => (
               <Options key={index} label={item.judul} url={item.url} />
             ))}
         </div>

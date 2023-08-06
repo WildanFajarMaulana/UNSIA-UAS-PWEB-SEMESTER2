@@ -7,7 +7,9 @@ const Quiz = () => {
   const [dataSoal, setDataSoal] = useState(null);
   const [soal, setSoal] = useState(null);
   const [indexSoal, setIndexSoal] = useState(null);
-  const [indexJawaban, setSoalIndexJawaban] = useState(null);
+  const [indexJawaban, setSoalIndexJawaban] = useState({
+    jawaban: {},
+  });
   const [dataFinal, setDataFinal] = useState({
     id_quiz: 1,
     jawaban: {},
@@ -21,12 +23,16 @@ const Quiz = () => {
 
   const handleChangeSoal = (soal_id) => {
     setIndexSoal(soal_id);
-    setSoalIndexJawaban(null);
     setSoal(dataSoal && dataSoal[0].soal.filter((data) => data.id === soal_id));
   };
 
   const handleChooseJawaban = (soal_id, jawaban_id) => {
-    setSoalIndexJawaban(jawaban_id);
+    setSoalIndexJawaban((prevData) => ({
+      jawaban: {
+        ...prevData?.jawaban,
+        [soal_id]: jawaban_id,
+      },
+    }));
     setDataFinal((prevData) => ({
       ...prevData,
       jawaban: {
@@ -53,9 +59,22 @@ const Quiz = () => {
       score: score,
       date: new Date().toISOString(),
     });
-    localStorage.setItem("dataQuiz", JSON.stringify(dataToLocalStorage));
+
+    const checkDataQuiz = JSON.parse(localStorage.getItem("dataQuiz"));
+    if (checkDataQuiz) {
+      checkDataQuiz.push({
+        name: generateRandomName(),
+        class: "IT-204",
+        quizTitle: soal && soal[0].text,
+        score: score,
+        date: new Date().toISOString(),
+      });
+      localStorage.setItem("dataQuiz", JSON.stringify(checkDataQuiz));
+    } else {
+      localStorage.setItem("dataQuiz", JSON.stringify(dataToLocalStorage));
+    }
     alert(`Nilai Anda : ${score}`);
-    router.push("/class/pageScore")
+    router.push("/class/pageScore");
   };
 
   useEffect(() => {
@@ -82,7 +101,8 @@ const Quiz = () => {
             soal[0].pilihan_jawaban.map((data) => (
               <div
                 className={`w-full bg-[#F3F4F6] rounded-xl p-4 hover:opacity-75 cursor-pointer  ${
-                  data.id === indexJawaban && "border border-[#4ADE80]"
+                  data.id === indexJawaban?.jawaban[soal[0].id] &&
+                  "border border-[#4ADE80]"
                 }`}
                 key={data.id}
                 onClick={() => handleChooseJawaban(soal[0].id, data.id)}
@@ -114,7 +134,7 @@ const Quiz = () => {
             className="w-full bg-[#15803D] text-white  flex items-center justify-center rounded-md p-2 cursor-pointer hover:opacity-80"
             onClick={handleSubmit}
           >
-            Submit
+            <b>Submit</b>
           </div>
         </div>
       </div>
