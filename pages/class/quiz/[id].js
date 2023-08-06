@@ -16,6 +16,21 @@ const Quiz = () => {
   });
 
   const router = useRouter();
+  const { id } = router.query;
+
+  useEffect(() => {
+    if (id) {
+      setDataSoal(dataQuiz.filter((data) => data.id == id));
+    }
+  }, [id]);
+
+  useEffect(() => {
+    setSoal(dataSoal && dataSoal[0].soal.filter((data) => data.id === 1));
+    setIndexSoal(
+      dataSoal && dataSoal[0].soal.filter((data) => data.id === 1)[0].id
+    );
+  }, [dataSoal]);
+
 
   const generateRandomName = () => {
     return faker.internet.userName();
@@ -77,16 +92,6 @@ const Quiz = () => {
     router.push("/class/pageScore");
   };
 
-  useEffect(() => {
-    setDataSoal(dataQuiz.filter((data) => data.id === 1));
-  }, []);
-
-  useEffect(() => {
-    setSoal(dataSoal && dataSoal[0].soal.filter((data) => data.id === 1));
-    setIndexSoal(
-      dataSoal && dataSoal[0].soal.filter((data) => data.id === 1)[0].id
-    );
-  }, [dataSoal]);
 
   return (
     <div className="flex flex-row space-x-44">

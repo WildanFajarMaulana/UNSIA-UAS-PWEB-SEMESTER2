@@ -102,80 +102,42 @@ export const dataQuiz = [
 ];
 
 export const dataModule = [
-  {
-    videoUrl: "https://www.youtube.com/watch?v=VIDEO_ID_1",
-    title: "Module 1: Introduction to React",
-    description: "Description for Module 1",
-    audioUrl: "https://example.com/audio1.mp3",
-  },
-  {
-    videoUrl: "https://www.youtube.com/watch?v=VIDEO_ID_2",
-    title: "Module 2: State and Props",
-    description: "Description for Module 2",
-    audioUrl: "https://example.com/audio2.mp3",
-  },
+  {},
+  {},
   // Add more modules here as needed
 ];
 
 export const dataListModule = [
   {
-    judul: "HTML Dasar",
+    id: 1,
     url: "/html-dasar",
+    videoUrl: "https://www.youtube.com/watch?v=VIDEO_ID_1",
+    title: "Module 1: Paragraf",
+    description: "Description for Module 1",
+    audioUrl: "https://example.com/audio1.mp3",
   },
   {
-    judul: "CSS Dasar",
+    id: 2,
     url: "/css-dasar",
+    videoUrl: "https://www.youtube.com/watch?v=VIDEO_ID_2",
+    title: "Module 2: Display",
+    description: "Description for Module 2",
+    audioUrl: "https://example.com/audio2.mp3",
   },
   {
-    judul: "JavaScript Dasar",
+    id: 3,
     url: "/javascript-dasar",
+    videoUrl: "https://www.youtube.com/watch?v=VIDEO_ID_1",
+    title: "Module 1: Array",
+    description: "Description for Module 3",
+    audioUrl: "https://example.com/audio1.mp3",
   },
   {
-    judul: "Bootstrap Framework",
+    id: 4,
     url: "/bootstrap-framework",
-  },
-  {
-    judul: "Node.js dan NPM",
-    url: "/nodejs-npm",
-  },
-  {
-    judul: "React.js",
-    url: "/reactjs",
-  },
-  {
-    judul: "Vue.js",
-    url: "/vuejs",
-  },
-  {
-    judul: "Express.js",
-    url: "/expressjs",
-  },
-  {
-    judul: "MongoDB",
-    url: "/mongodb",
-  },
-  {
-    judul: "RESTful API",
-    url: "/restful-api",
-  },
-  {
-    judul: "Authentication",
-    url: "/authentication",
-  },
-  {
-    judul: "Webpack dan Babel",
-    url: "/webpack-babel",
-  },
-  {
-    judul: "TypeScript",
-    url: "/typescript",
-  },
-  {
-    judul: "Testing dan Debugging",
-    url: "/testing-debugging",
-  },
-  {
-    judul: "Deployment ke Heroku",
-    url: "/deployment-heroku",
+    videoUrl: "https://www.youtube.com/watch?v=VIDEO_ID_1",
+    title: "Module 1: Container",
+    description: "Description for Module 4",
+    audioUrl: "https://example.com/audio1.mp3",
   },
 ];

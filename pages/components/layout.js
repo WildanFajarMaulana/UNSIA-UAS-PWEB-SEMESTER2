@@ -14,11 +14,12 @@ const Layout = ({ children }) => {
   return (
     <>
       <Navbar />
-      <Header title={capitalizedSegment} subtitle={`Sub ${capitalizedSegment}`} />
+      <Header
+        title={capitalizedSegment ? capitalizedSegment : "Home"}
+        subtitle={capitalizedSegment ? `Sub ${capitalizedSegment}` : "Sub Home"}
+      />
       <div className="min-h-screen py-[60px] px-[120px]">
-        <div className="container mx-auto">
-          {children}
-        </div>
+        <div className="container mx-auto">{children}</div>
       </div>
       <Footer />
     </>
