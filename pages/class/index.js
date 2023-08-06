@@ -1,5 +1,5 @@
 import React from "react";
-import { dataListModule, dataQuiz } from "../utils/data";
+import { dataListModule, dataQuiz } from "../../utils/data";
 import Link from "next/link";
 
 const Options = (props) => {

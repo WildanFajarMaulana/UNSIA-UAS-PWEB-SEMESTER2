@@ -1,4 +1,4 @@
-import { dataQuiz } from "@/pages/utils/data";
+import { dataQuiz } from "@/utils/data";
 import { faker } from "@faker-js/faker";
 import { useRouter } from "next/router";
 import React, { useEffect, useState } from "react";

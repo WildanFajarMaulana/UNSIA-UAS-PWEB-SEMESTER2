@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
-import { dataModule } from "../../utils/data";
-import { dataListModule } from "@/pages/utils/data";
+import { dataModule } from "../../../utils/data";
+import { dataListModule } from "@/utils/data";
 import { useRouter } from "next/router";
 
 const DetailClass = () => {
