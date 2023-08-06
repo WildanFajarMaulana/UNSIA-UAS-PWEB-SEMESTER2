@@ -1,53 +1,48 @@
 import React from "react";
-import { dataListModule, dataQuiz } from "../../utils/data";
+import Image from "next/image";
+import { courses } from "@/utils/data";
 import Link from "next/link";
 
-const Options = (props) => {
+const CourseItem = ({ imageSrc, imageUrl, label, description }) => {
   return (
-    <div className="min-w-full bg-white p-3 rounded-md shadow-lg hover:bg-gray-200 hover:cursor-pointer border-1 border-gray-200 mb-2">
-      <Link
-        href={props.url}
-        className="text-slate-800 font-medium whitespace-normal w-full"
-      >
-        {props.label}
+    <div className="col-span-6">
+      <Link href={imageUrl}>
+        <div className="flex flex-row min-w-full bg-white rounded-md shadow-lg hover:bg-gray-200 hover:cursor-pointer border-1 border-gray-200 mb-2 overflow-hidden">
+          <div className="min-w-max">
+            <Image
+              src={imageSrc}
+              className="filter brightness-75 w-[200px] h-[200px]"
+              alt={label}
+              width={200}
+              height={200}
+            />
+          </div>
+          <div className="px-4 py-8 gap-2">
+            <label className="text-xl font-semibold text-slate-800">
+              {label}
+            </label>
+            <p className="text-sm text-slate-500">{description}</p>
+          </div>
+        </div>
       </Link>
     </div>
   );
 };
 
-const Class = () => {
+const ListClass = () => {
   return (
-    <>
-      <div className="grid grid-cols-12 gap-8">
-        <div className="col-span-9">
-          <div className="text-xl text-slate-800 mb-12 font-bold">
-            Daftar Modul
-          </div>
-          {dataListModule &&
-            dataListModule.map((item, index) => (
-              <Options
-                key={index}
-                label={item.title}
-                url={`/class/detail/${item.id}`}
-              />
-            ))}
-        </div>
-        <div className="col-span-3">
-          <div className="text-xl text-slate-800 mb-12 font-bold">
-            Daftar quiz
-          </div>
-          {dataQuiz &&
-            dataQuiz.map((item, index) => (
-              <Options
-                key={index}
-                label={item.title}
-                url={`/class/quiz/${item.id}`}
-              />
-            ))}
-        </div>
-      </div>
-    </>
+    <div className="grid grid-cols-12 gap-8">
+      {courses.map((course, index) => (
+        <CourseItem
+          key={index}
+          imageSrc={course.imageSrc}
+          imageUrl={course.imageUrl}
+          label={course.label}
+          description={course.description}
+        />
+      ))}
+    </div>
   );
 };
 
-export default Class;
+export default ListClass;

@@ -141,3 +141,34 @@ export const dataListModule = [
     audioUrl: "https://example.com/audio1.mp3",
   },
 ];
+
+export const courses = [
+  {
+    imageSrc: "/images/book1.jpg",
+    imageUrl: "/class/module",
+    label: "Pemrograman Web",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse vitae justo vel neque lacinia pulvinar. Maecenas nibh orci, lobortis vehicula luctus in, pulvinar ac erat.",
+  },
+  {
+    imageSrc: "/images/math.jpg",
+    imageUrl: "/class/module",
+    label: "Kalkulus",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse vitae justo vel neque lacinia pulvinar. Maecenas nibh orci, lobortis vehicula luctus in, pulvinar ac erat.",
+  },
+  {
+    imageSrc: "/images/book2.jpg",
+    imageUrl: "/class/module",
+    label: "Stastitika",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse vitae justo vel neque lacinia pulvinar. Maecenas nibh orci, lobortis vehicula luctus in, pulvinar ac erat.",
+  },
+  {
+    imageSrc: "/images/laptop.jpg",
+    imageUrl: "/class/module",
+    label: "Sistem Basis Data",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse vitae justo vel neque lacinia pulvinar. Maecenas nibh orci, lobortis vehicula luctus in, pulvinar ac erat.",
+  },
+];
