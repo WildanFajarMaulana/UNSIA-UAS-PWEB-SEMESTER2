@@ -45,6 +45,7 @@ const ListClass = () => {
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse vitae justo vel neque lacinia pulvinar. Maecenas nibh orci, lobortis vehicula luctus in, pulvinar ac erat.",
     },
   ];
+
   return (
     <>
       {courses.map((course, index) => (
