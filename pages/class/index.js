@@ -1,61 +1,108 @@
 import React from "react";
 
-const CourseItem = ({ imageSrc, label, description }) => {
+const Options = (props) => {
   return (
-    <div className="col-span-6">
-      <div className="flex flex-row min-w-full bg-white rounded-md shadow-lg hover:bg-gray-200 hover:cursor-pointer border-1 border-gray-200 mb-2 overflow-hidden">
-        <div className="min-w-max">
-          <img src={imageSrc} className="filter brightness-75" alt={label} />
-        </div>
-        <div className="px-4 py-8 gap-2">
-          <label className="text-xl font-semibold text-slate-800">
-            {label}
-          </label>
-          <p className="text-sm text-slate-500">{description}</p>
-        </div>
-      </div>
+    <div className="min-w-full bg-white p-3 rounded-md shadow-lg hover:bg-gray-200 hover:cursor-pointer border-1 border-gray-200 mb-2">
+      <a
+        href={props.url}
+        className="text-slate-800 font-medium whitespace-normal"
+      >
+        {props.label}
+      </a>
     </div>
   );
 };
 
 const Class = () => {
-  const courses = [
+  const module = [
     {
-      imageSrc: "https://source.unsplash.com/random/200x200",
-      label: "Pemrograman Web",
-      description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse vitae justo vel neque lacinia pulvinar. Maecenas nibh orci, lobortis vehicula luctus in, pulvinar ac erat.",
+      judul: "HTML Dasar",
+      url: "/html-dasar",
     },
     {
-      imageSrc: "https://source.unsplash.com/random/200x200",
-      label: "Kalkulus",
-      description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse vitae justo vel neque lacinia pulvinar. Maecenas nibh orci, lobortis vehicula luctus in, pulvinar ac erat.",
+      judul: "CSS Dasar",
+      url: "/css-dasar",
     },
     {
-      imageSrc: "https://source.unsplash.com/random/200x200",
-      label: "Stastitika",
-      description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse vitae justo vel neque lacinia pulvinar. Maecenas nibh orci, lobortis vehicula luctus in, pulvinar ac erat.",
+      judul: "JavaScript Dasar",
+      url: "/javascript-dasar",
     },
     {
-      imageSrc: "https://source.unsplash.com/random/200x200",
-      label: "Sistem Basis Data",
-      description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse vitae justo vel neque lacinia pulvinar. Maecenas nibh orci, lobortis vehicula luctus in, pulvinar ac erat.",
+      judul: "Bootstrap Framework",
+      url: "/bootstrap-framework",
+    },
+    {
+      judul: "Node.js dan NPM",
+      url: "/nodejs-npm",
+    },
+    {
+      judul: "React.js",
+      url: "/reactjs",
+    },
+    {
+      judul: "Vue.js",
+      url: "/vuejs",
+    },
+    {
+      judul: "Express.js",
+      url: "/expressjs",
+    },
+    {
+      judul: "MongoDB",
+      url: "/mongodb",
+    },
+    {
+      judul: "RESTful API",
+      url: "/restful-api",
+    },
+    {
+      judul: "Authentication",
+      url: "/authentication",
+    },
+    {
+      judul: "Webpack dan Babel",
+      url: "/webpack-babel",
+    },
+    {
+      judul: "TypeScript",
+      url: "/typescript",
+    },
+    {
+      judul: "Testing dan Debugging",
+      url: "/testing-debugging",
+    },
+    {
+      judul: "Deployment ke Heroku",
+      url: "/deployment-heroku",
     },
   ];
 
+  const listQuiz = module.map((item) => ({
+    judul: `Quiz ${item.judul}`,
+    url: `/quiz-${item.url.replace("/", "")}`,
+    jumlah: Math.floor(Math.random() * 10) + 1,
+  }));
+
   return (
     <>
-      {courses.map((course, index) => (
-        <CourseItem
-          key={index}
-          imageSrc={course.imageSrc}
-          label={course.label}
-          description={course.description}
-        />
-      ))}
+      <div className="col-span-9">
+        <div className="text-xl text-slate-800 mb-12 font-bold">
+          Daftar Modul
+        </div>
+        {module &&
+          module.map((item, index) => (
+            <Options key={index} label={item.judul} url={item.url} />
+          ))}
+      </div>
+      <div className="col-span-3">
+        <div className="text-xl text-slate-800 mb-12 font-bold">
+          Daftar quiz
+        </div>
+        {listQuiz &&
+          listQuiz.map((item, index) => (
+            <Options key={index} label={item.judul} url={item.url} />
+          ))}
+      </div>
     </>
   );
 };
